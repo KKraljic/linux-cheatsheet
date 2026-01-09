@@ -1,0 +1,7 @@
+# Create a zpool
+
+sudo zpool create -O 'mountpoint=none' das-files raidz1 /dev/sdc /dev/sdd /dev/sde /dev/pdf ...
+
+# List available zpools/ status
+sudo zpool list
+sudo zpool status <zpool-name>

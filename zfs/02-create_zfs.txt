@@ -1,0 +1,22 @@
+# Create Encrypted Filesystem in already existing ZPool
+
+sudo mkdir /media/path-to-mountpoint
+sudo zfs create -o mountpoint=/media/path-to-mountpoint -o encryption=aes-256-gcm -o keyformat=passphrase <zpool-name>/<filesystem-name>
+
+# Create Unencrypted Filesystem in already existing ZPool
+
+sudo mkdir /media/path-to-mountpoint
+sudo zfs create -o mountpoint=/media/path-to-mountpoint <zpool-name>/<filesystem-name>
+
+#Execute the following command for each encrypted filesystem in your zpool
+
+# Decrypt Filesystem prior to mounting
+sudo zfs load-key -r "zpool-name/filesystem-name"
+
+
+# Mount zfs to OS
+'Actually, not needed...
+#sudo zfs mount -a
+
+# Make sure everything went as expected
+ls /media/path-to-mountpoint
