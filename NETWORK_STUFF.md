@@ -98,3 +98,36 @@ ff02::fb 5353
 ## BGP
 
 TODO: Add some info on bird2
+
+## NetworkManager
+
+View all connections:
+
+```sh
+nmcli connection show
+```
+
+View all network devices:
+
+```sh
+nmcli device show
+```
+
+You can also specify a connection or device for both commands to get a more detailed view of them:
+
+```sh
+nmcli connection show Local\ Connection
+nmcli device show enp0s16
+```
+
+Edit a connection:
+
+```sh
+nmcli connection edit Local\ Connection
+```
+
+You can also install and use `nmtui` to have a graphical interface to perform basic tasks. It is not a fully featured replacement for `nmcli`, though.
+
+## systemd-networkd
+
+For this, refer to the excellent documentation available at: https://www.freedesktop.org/software/systemd/man/latest/systemd-networkd.html
