@@ -131,3 +131,15 @@ You can also install and use `nmtui` to have a graphical interface to perform ba
 ## systemd-networkd
 
 For this, refer to the excellent documentation available at: https://www.freedesktop.org/software/systemd/man/latest/systemd-networkd.html
+
+## VPP
+
+TODO: Add some docs and what [VPP](https://s3-docs.fd.io/vpp/) is. Also mention DPDK.
+
+## VyOS
+
+A networking-focused Debian-based Linux distribution. It is basically a fully-featured enterprise route with a CLI similar to Juniper Junos. It was originally a fork from the Vyatta project, which is also the base for Ubiquitis EdgeRouters.
+
+## ifupdown2
+
+This is legacy, anytime you find `/etc/network/interfaces` in the wild, consider the system deprecated :).
